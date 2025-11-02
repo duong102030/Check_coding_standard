@@ -1,6 +1,6 @@
 - id: add-nkd-coding-standard
   name: Apply NKD coding standard (C/H)
-  entry: python check_coding_standard.py
+  entry: check_coding_standard
   language: python
-  files: \.(c|h)$
+  files: \.(c|h|cpp|hpp|ino)$
   stages: [commit]
