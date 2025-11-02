@@ -1,0 +1,40 @@
+repos:
+  # 1) Call the hook of the current repo (in dev/test)
+  - repo: https://github.com/duong102030/Check_copyright
+    rev: main
+    hooks:
+      - id: add-copyright-nkd
+        stages: [commit]
+  # 2) Other useful hooks (Optional)
+  - repo: https://github.com/pre-commit/pre-commit-hooks.git
+    rev: v4.6.0
+    hooks:
+    - id: check-added-large-files # 500KB
+      stages: [commit]
+    - id: check-ast
+      stages: [commit]
+    - id: check-merge-conflict # no ">>>> strings"
+      stages: [commit]
+    - id: check-xml
+      stages: [commit]
+    - id: check-yaml
+      stages: [commit]
+    - id: trailing-whitespace
+      stages: [commit]
+      args: [--markdown-linebreak-ext=md]
+  # 3️) Check commit message format (GitFlow / Conventional Commit)
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.3.0
+    hooks:
+      - id: conventional-pre-commit
+        name: Conventional Commit message check
+        stages: [commit-msg]
+        args: [
+          --strict
+        ]
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v17.0.6
+    hooks:
+      - id: clang-format
+        name: C/C++ code format check
+        args: ["-i", "--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Linux, UseTab: Never}"]
