@@ -48,7 +48,8 @@ repos:
       - id: add-nkd-coding-standard
         name: Apply NKD coding standard (C/H)
         # entry: python check_coding_standard.py --mode copyright
-        entry: python check_coding_standard.py --mode style
+        # entry: python check_coding_standard.py --mode style
+        entry: python check_coding_standard.py --mode both
         language: system
         files: \.(c|h|cpp|hpp|ino)$
         stages: [commit]

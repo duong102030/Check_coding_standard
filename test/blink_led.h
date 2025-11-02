@@ -3,19 +3,16 @@
  *
  *  Created on: November 03, 2025
  *      Author: Nguyen Kha Duong
- *      Contact via email: duong nguyen kha.daniel@gmail.com
+ *      Contact via email: duongnguyenkha.daniel@gmail.com
  */
 
 /**********************************************************************************************************************
  * Includes
  *********************************************************************************************************************/
-#include "stm32f4xx_hal.h"
 
 /**********************************************************************************************************************
  * Macro definitions
  *********************************************************************************************************************/
-#define LED_DEFAULT_PORT GPIOA
-#define LED_DEFAULT_PIN GPIO_PIN_5
 
 /**********************************************************************************************************************
  * Typedef definitions
@@ -24,18 +21,12 @@
 /**********************************************************************************************************************
  * Exported global variables
  *********************************************************************************************************************/
-extern GPIO_InitTypeDef g_led_gpio_init;
 
 /**********************************************************************************************************************
  * Exported global functions (API)
  *********************************************************************************************************************/
 #ifdef __cplusplus
 extern "C" {
-void LED_Init(GPIO_TypeDef* p_port, uint16_t pin);
-void LED_On(GPIO_TypeDef* p_port, uint16_t pin);
-void LED_Off(GPIO_TypeDef* p_port, uint16_t pin);
-void LED_Toggle(GPIO_TypeDef* p_port, uint16_t pin);
-void LED_Blink(GPIO_TypeDef* p_port, uint16_t pin, uint8_t count, uint32_t delay_ms);
 #endif
 
 #ifdef __cplusplus
