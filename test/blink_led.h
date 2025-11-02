@@ -1,3 +1,10 @@
+/*
+ * blink_led.h
+ *
+ *  Created on: November 03, 2025
+ *      Author: Nguyen Kha Duong
+ *      Contact via email: duong nguyen kha.daniel@gmail.com
+ */
 
 /**********************************************************************************************************************
  * Includes
