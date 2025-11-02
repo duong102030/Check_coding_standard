@@ -38,3 +38,12 @@ repos:
       - id: clang-format
         name: C/C++ code format check
         args: ["-i", "--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Linux, UseTab: Never}"]
+  # 3️) check standard encoding format
+  - repo: local
+    hooks:
+      - id: add-nkd-coding-standard
+        name: Apply NKD coding standard (C/H)
+        entry: python check_coding_standard.py
+        language: system
+        files: \.(c|h)$
+        stages: [commit]
