@@ -37,7 +37,11 @@ repos:
     hooks:
       - id: clang-format
         name: C/C++ code format check
-        args: ["-i", "--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Linux, UseTab: Never}"]
+        args: [
+          "-i",
+          "--style=file"
+        ]
+        files: \.(c|cpp|h|hpp)$
   # 3️) check standard encoding format
   - repo: local
     hooks:
