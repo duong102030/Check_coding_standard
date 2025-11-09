@@ -8,6 +8,10 @@ setup(
     author_email="duong.nguyen.kha.daniel@gmail.com",
     url="https://github.com/duong102030/Check_coding_standard.git",
     py_modules=["check_coding_standard"],
+    include_package_data=True,
+    package_data={
+        "": ["templates/*.txt"],
+    },
     entry_points={
         "console_scripts": [
             "check_coding_standard = check_coding_standard:main",
